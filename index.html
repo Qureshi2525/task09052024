@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+
+    <style>
+       /* Style the tab */
+.tab {
+  overflow: hidden;
+  /* border: 1px solid #ccc; */
+  /* background-color: #177bbd86; */
+ }
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+      </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 >Welcome to Our Website</h1>
+            
+        </div>
+        <br>
+    </header>
+    <div class="tab">
+        <button id="tabs1" class="tablinks" onclick="openCity(event, 'Todo')">TO-DO LIST</button>
+        <button id="tabs1" class="tablinks" onclick="openCity(event, 'Speach')">SPEECH DETECTION</button>
+        <button id="tabs1" class="tablinks" onclick="openCity(event, 'Geo')">GEOLOCATION</button>
+        <button id="tabs1" class="tablinks" onclick="openCity(event, 'Movie')">MOVIE APP</button>
+        <button id="tabs1" class="tablinks" onclick="openCity(event, 'Password')">PASSWORD GENERATOR</button>
+    </div>
+        <div class="tab">
+        <button id="tabs1" class="tablinks" onclick="openCity(event, 'Memory')">MEMORY MATCHING GAME</button>
+        <button id="tabs1" class="tablinks" onclick="openCity(event, 'Game')">HANGMAN GAME</button>
+        <button id="tabs1" class="tablinks" onclick="openCity(event, 'Digital')">DIGITAL CLOCK</button>
+        <button id="tabs1" class="tablinks" onclick="openCity(event, 'Timer')">POMODORO TIMER</button>
+        <button id="tabs1" class="tablinks" onclick="openCity(event, 'Virtual')">VIRTUAL KEYBOARD</button>
+
+      </div>
+
+      <!-- /* 1 TO-DO LIST */ -->
+        <div id="Todo" class="tabcontent">
+        <h1 >1 TO-DO LIST</h1>
+<p class="prs">Create a TO-DO LIST using HTML CSS and JavaScript</p>
+<br>
+<div id="myDIV" class="header">
+    <h2>My To Do List</h2>
+    <input class="col-sm-5 col-md-8 col-8" type="text" id="myInput" placeholder="Add To List Title...">
+    <span  onclick="newElement()" class="addBtn">Add Todo</span>
+  </div>
+  
+  <ul id="myUL">
+    <li>Teacher Sir Rizwan Bhatti</li>
+    <li class="checked">Mr. Zulfiqar Bhai</li>
+    <li>Mr. Usama Arian</li>
+    <li>Muhammad Quresh</li>
+    <li>Mr. Yasir Rasheed Qureshi</li>
+    <li>Zain ul Abdin</li>
+  </ul>
+  <marquee Class="marquee" >
+    YASIR RASHEED QURESHI CCO-118488 PROJECT OF TODO LIST IN JAVASCRIPT 
+    </marquee>
+</div>
+<!-- /* 2 SPEECH DETECTION */ -->
+    <div id="Speach" class="tabcontent">
+           <h1>2 SPEECH DETECTION</h1> 
+        <p class="prs">Create a SPEECH DETECTION using HTML CSS and JavaScript</p>
+        <div class="container">
+            <h1 > Speech to Text</h1>
+            <div class="buttons">
+                <button id="startButton"> Start Listening </button>
+                <button id="stopButton" disabled> Stop Listening </button>
+            </div>
+            <div id="output" class="outputText"></div>
+        </div>
+    
+</div>
+<!-- /* 3 GEOLOCATION */ -->
+    <div id="Geo" class="tabcontent">
+        <h1 >3 GEOLOCATION</h1>
+        <p  class="prs">Create a GEOLOCATION using HTML CSS and JavaScript</p>
+        <br>
+        <h2>My Location</h2>
+        <p>Latitude: <span id="latitude"></span></p>
+        <p>Longitude: <span id="longitude"></span></p>
+        <div id="map"></div>
+</div>
+<!-- /* 4 MOVIE APP */ -->
+<div id="Movie" class="tabcontent">
+    <h1> 
+        4 MOVIE APP 
+    </h1> 
+<p class="prs">create a MOVIE APP using HTML CSS and JavaScript</p>
+<header>
+    <form id="form">
+      <input type="text" id="search" class="search" placeholder="Search">
+    </form>
+  </header>
+
+  <main id="main"></main>
+</div>
+<!-- /* 5 PASSWORD GENERATOR */ -->
+
+<div id="Password" class="tabcontent">
+    <h1> 
+        5 PASSWORD GENERATOR 
+    </h1> 
+<p class="prs">create a PASSWORD GENERATOR using HTML CSS and JavaScript</p>
+<div class="container">
+    <h1>Password Generator</h1>
+    <label for="length">Password Length:</label>
+    <div class="pgi">
+    <input type="number" id="length" min="4" max="50" value="12">
+    <button onclick="generatePassword()">Generate Password</button>
+</div>
+    <input type="text" id="password" readonly>
+</div>
+</div>
+<!-- /* 6 MEMORY MATCHING GAME */ -->
+<div id="Memory" class="tabcontent">
+    <h1> 
+        6 MEMORY MATCHING GAME
+     </h1> 
+ <p class="prs">create a MEMORY MATCHING GAME using HTML CSS and JavaScript</p>
+ 
+    <div class="container"> 
+        <div id="dynamic-cards" class="game-container"> 
+            <div class="heading-container"> 
+                <h1 class="gfg-heading"> 
+                      QURESHI YASIR 
+                  </h1> 
+                <h2 class="game-heading">Click any card to flip it!</h2> 
+            </div> 
+            <div class="cards-container"> 
+                <div class="card"> 
+                    <img 
+                        src= 
+"./Picture/yq-letter-logo-design-with-circle-shape-yq-circle-cube-shape-logo-design_634196-3546.jpg"
+                        class="outline-image"> 
+                    <img id="1" 
+                        src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231122102835/html5Image.png" 
+                        alt="HTML Image" class="card-image"> 
+                </div> 
+                <div class="card"> 
+                    <img 
+                        src= 
+                        "./Picture/yq-letter-logo-design-with-circle-shape-yq-circle-cube-shape-logo-design_634196-3546.jpg"
+                        class="outline-image"> 
+                    <img id="2" 
+                        src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231122102834/JSImage.jpg"
+                        alt="JavaScript Image" class="card-image"> 
+                </div> 
+                <div class="card"> 
+                    <img 
+                        src= 
+                        "./Picture/yq-letter-logo-design-with-circle-shape-yq-circle-cube-shape-logo-design_634196-3546.jpg"
+                        class="outline-image"> 
+                    <img id="3" 
+                        src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231122102834/CSS3Image.png"
+                        alt="CSS Image" class="card-image"> 
+                </div> 
+                <div class="card"> 
+                    <img 
+                        src= 
+                       "./Picture/yq-letter-logo-design-with-circle-shape-yq-circle-cube-shape-logo-design_634196-3546.jpg"
+                        class="outline-image"> 
+                    <img id="4" 
+                        src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231122102834/JSImage.jpg"
+                        alt="JavaScript Image" class="card-image"> 
+                </div> 
+  
+                <div class="card"> 
+                    <img 
+                        src= 
+                        "./Picture/yq-letter-logo-design-with-circle-shape-yq-circle-cube-shape-logo-design_634196-3546.jpg"
+                        class="outline-image"> 
+                    <img id="5" 
+                        src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231122102835/html5Image.png"
+                        alt="HTML Image" class="card-image"> 
+                </div> 
+                <div class="card"> 
+                    <img 
+                        src= 
+                        "./Picture/yq-letter-logo-design-with-circle-shape-yq-circle-cube-shape-logo-design_634196-3546.jpg"
+                        class="outline-image"> 
+                    <img id="6" 
+                        src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231122102833/vueImage.png"
+                        alt="VUE Image" class="card-image"> 
+                </div> 
+                <div class="card"> 
+                    <img 
+                        src= 
+                        "./Picture/yq-letter-logo-design-with-circle-shape-yq-circle-cube-shape-logo-design_634196-3546.jpg"
+                        class="outline-image"> 
+                    <img id="7" 
+                        src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231122102834/CSS3Image.png"
+                        alt="CSS Image" class="card-image"> 
+                </div> 
+                <div class="card"> 
+                    <img 
+                        src= 
+                        "./Picture/yq-letter-logo-design-with-circle-shape-yq-circle-cube-shape-logo-design_634196-3546.jpg"
+                        class="outline-image"> 
+                    <img id="8" 
+                        src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231122102833/reactImage.png"
+                        alt="React Image" class="card-image"> 
+                </div> 
+  
+                <div class="card"> 
+                    <img 
+                        src= 
+                        "./Picture/yq-letter-logo-design-with-circle-shape-yq-circle-cube-shape-logo-design_634196-3546.jpg"
+                        class="outline-image"> 
+                    <img id="9" 
+                        src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231122102833/vueImage.png"
+                        alt="VUE Image" class="card-image"> 
+                </div> 
+                <div class="card"> 
+                    <img 
+                        src= 
+                        "./Picture/yq-letter-logo-design-with-circle-shape-yq-circle-cube-shape-logo-design_634196-3546.jpg"
+                        class="outline-image"> 
+                    <img id="10"
+                        src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231122102833/AngularImage.png"
+                        alt="Angular Image" class="card-image"> 
+                </div> 
+                <div class="card"> 
+                    <img 
+                        src= 
+                        "./Picture/yq-letter-logo-design-with-circle-shape-yq-circle-cube-shape-logo-design_634196-3546.jpg"
+                        class="outline-image"> 
+                    <img id="11" 
+                        src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231122102833/reactImage.png"
+                        alt="React Image" class="card-image"> 
+                </div> 
+                <div class="card"> 
+                    <img 
+                        src= 
+                        "./Picture/yq-letter-logo-design-with-circle-shape-yq-circle-cube-shape-logo-design_634196-3546.jpg"
+                        class="outline-image"> 
+                    <img id="12"
+                        src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20231122102833/AngularImage.png"
+                        alt="Angular Image" class="card-image"> 
+                </div> 
+            </div> 
+  
+            <div class="progress-container"> 
+                <div class="move-counter">Moves: 0</div> 
+                <button id="restart" class="restart-button"> 
+                      Restart Game 
+                  </button> 
+            </div> 
+        </div> 
+    </div> 
+</div>
+<!-- /* 7 HANGMAN GAME */ -->
+<div id="Game" class="tabcontent">
+    <h1> 
+        7 HANGMAN GAME 
+    </h1> 
+<p class="prs">create a HANGMAN GAME using HTML CSS and JavaScript</p>
+
+<div id="home">
+    <div class="title">Hangman</div>
+    <div class="button anim" onclick="startGame()">Play</div>
+    <div class="foother" style="color: white;">Coded by Yasir Rasheed</div>
+</div>
+<div id="result" class="h">
+    <div class="title" id="rT"></div>
+    <div class="body" id="rM"></div>
+    <div class="button anim" onclick="startGame()">Try Again?</div>
+</div>
+<div id="pGame">
+    <div id="letter"></div>
+    <div id="game">
+        <div class="player">
+            <div class="playerModel">
+                <div class="head" data="false" id="g4"></div>
+                <div class="body" data="false" l="false" r="false" id="g5"></div>
+                <div class="foot" data="false" l="false" r="false" id="g6"></div>
+            </div>
+        </div>
+        <div class="stang3" data="false" id="g3"></div>
+        <div class="stang2" data="false" id="g2"></div>
+        <div class="stang" data="false" id="g1"></div>
+        <div class="ground" data="false" id="g0"></div>
+        <div class="hintButton" data="false" id="hintButton" onclick="hint(hint)" style="color: white;" >HINT</div>
+    </div>
+    <div id="tastatur">
+        <div id="moveKeybord"><div class="marg"></div></div>
+        <div id="keybord"></div>
+    </div>
+       <div class="hint" id="hint">
+        <div class="title">Hint<div class="exit" onclick="hintExit()">X</div></div>
+        <div class="body" id="hintText"></div>
+    </div>
+</div>
+</div>
+<!-- /* 8 DIGITAL CLOCK WITH TIME ZONES */ -->
+<div id="Digital" class="tabcontent">
+    <h1> 
+        8 DIGITAL CLOCK WITH TIME ZONES 
+    </h1> 
+<p class="prs">create a DIGITAL CLOCK WITH TIME ZONES using HTML CSS and JavaScript</p>
+
+<div id="clock">8:10:45</div>
+</div>
+<!-- /* 9 POMODORO TIMER */ -->
+<div id="Timer" class="tabcontent">
+    <h1> 
+        9 POMODORO TIMER 
+    </h1> 
+<p class="prs">create a POMODORO TIMER using HTML CSS and JavaScript</p>
+<div class="pomodoro">
+    <h1>Pomodoro Timer</h1>
+    <div class="timer">
+      <span id="minutes">25</span>:<span id="seconds">00</span>
+    </div>
+        <div class="buttons">
+      <button id="start">Start</button>
+      <button id="pause">Pause</button>
+      <button id="stop">Stop</button>
+      <button id="reset">Reset</button>
+    </div>
+    <br>
+    <div class="manual-input">
+        <label for="manual-minutes" id="set" >Set Minutes Manual:</label>
+        <input type="number" id="manual-minutes" min="1" max="60" value="25">
+      </div>
+  </div>
+  
+</div>
+
+<!-- /* 10 VIRTUAL KEYBOARD */ -->
+<div id="Virtual" class="tabcontent">
+    <h1> 
+        10 VIRTUAL KEYBOARD
+    </h1> 
+<p class="prs">create a VIRTUAL KEYBOARD using HTML CSS and JavaScript</p>
+<div id="keyboard_container">
+    <div id="keyboard">
+     <div id="keys">
+      <button class="q">Q</button>
+      <button class="q">W</button>
+      <button class="q">E</button>
+      <button class="q">R</button>
+      <button class="q">T</button>
+      <button class="q">Y</button>
+      <button class="q">U</button>
+      <button class="q">I</button>
+      <button class="q">O</button>
+      <button class="q">P</button>
+      <button class="q">|</button>
+      <button class="q">\</button>
+      <button id="cls">&larr; Backspace</button>
+      <br />
+      <button class="q">A</button>
+      <button class="q">S</button>
+      <button class="q">D</button>
+      <button class="q">F</button>
+      <button class="q">G</button>
+      <button class="q">H</button>
+      <button class="q">J</button>
+      <button class="q">K</button>
+      <button class="q">L</button>
+      <button class="q">;</button>
+      <button class="q">'</button>
+      <button class="q">"</button>
+      <button class="q">:</button>
+      <br />
+      <button class="q">Z</button>
+      <button class="q">X</button>
+      <button class="q">C</button>
+      <button class="q">V</button>
+      <button class="q">B</button>
+      <button class="q">N</button>
+      <button class="q">M</button>
+      <button class="q">,</button>
+      <button class="q">.</button>
+      <button class="q">?</button>
+      <button class="q">/</button>
+      <br />
+      <button id="space">SPACE</button>
+     </div>
+    </div>
+   </div>
+   <br />
+   <br />
+   <input type="text" id="result1" readonly placeholder="your text will be shown here" />
+</div>
+      <br>
+      <!-- FOOTER ABOUT US  -->
+        <aside class="sidebar">
+            <h3 >About Us</h3>
+            <p  class="prs">Yasir Rasheed Qureshi ID Number CCO-118488 Teacher Muhammad Rizwan Bhatti Web and APP Madaris (Online)</p>
+        </aside>
+    </div>
+
+     <footer>
+        <div class="container1">
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+<script src="prs.js"></script>
+ 
+
+</body>
+
+</html>
