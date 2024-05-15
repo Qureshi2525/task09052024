@@ -888,16 +888,18 @@ button:hover {
 }
 
 #tastatur {
-  background-color: rgba(238, 238, 238, 0.9);
+  background-color: #333;
+  margin-top: 20px;
   bottom: 0;
   left: 0;
   margin: auto;
-  margin-right: 50px;
+  /* margin-right: 50px; */
   max-width: 500px;
   padding: 0 15px;
-  position: absolute;
+  /* position: absolute; */
   right: 0;
   text-align: center;
+  text-decoration: underline;
 }
 
 .marg {
