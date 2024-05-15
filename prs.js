@@ -586,10 +586,10 @@ function gameEnd(e) {
     var message;
 
     if (e) { // Player wins
-        imageSrc = "picture/victory.gif";
+        imageSrc = "victory.gif";
         message = "You Win!<br/>Congratulations, you found the word!<br/>Good Job!";
     } else { // Player loses
-        imageSrc = "picture/lost.gif";
+        imageSrc = "lost.gif";
         message = "You Lose!<br/>The word was \"" + word[select][0].toUpperCase() + "\"<br/>Better luck next time.";
     }
 
